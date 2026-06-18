@@ -140,6 +140,7 @@ if [[ "$critical_warning" != "0x0" && "$critical_warning" != "0" ]] ||
    [[ "$media_errors" != "0" ]] ||
    [[ "$SPARE_NUM" == "0" ]]; then
     echo -e "${RED}${BOLD}DRIVE HEALTH WARNING${RESET}"
+    echo -e "${RED}${BOLD}WARNINGS - you should run sudo nvme smart-log /dev/nvme0 ${RESET}"
     exit 1
 else
     echo -e "${GREEN}${BOLD}DRIVE HEALTH OK${RESET}"
